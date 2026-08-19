@@ -21,7 +21,7 @@ export default function MarqueeTrack() {
     const items = [...MARQUE_ITEMS, ...MARQUE_ITEMS];
     return (
       <section className="py-16">
-        <div className="overflow-hidden border-b border-foreground bg-primary-hover py-12">
+        <div className="overflow-hidden border-y border-foreground bg-primary-hover py-12">
             <div className="flex w-max animate-marque gap-8">
               {items.map((item, i) => (
           <span

@@ -39,7 +39,7 @@ const RIGHT_FEATURES: Feature[] = [
 
 export function FeaturesSection() {
   return (
-    <section className="bg-background px-6 py-20 text-center lg:px-10">
+    <section className="bg-background px-6 pt-16 pb-20  text-center lg:px-10">
       <h2 className="font-heading text-4xl font-bold text-foreground lg:text-5xl">
         Unsere Vorteile
       </h2>

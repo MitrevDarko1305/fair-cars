@@ -3,8 +3,8 @@
 export function CtaSection() {
   return (
     <section className="bg-foreground px-6 py-16 lg:px-10">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
-        <div>
+      <div className="mx-auto grid max-w-6xl  items-center gap-10 lg:grid-cols-2">
+        <div className="text-center lg:text-start">
           <span className="inline-block bg-background px-4 py-1.5 text-sm font-semibold text-foreground">
             Rufen Sie uns an
           </span>

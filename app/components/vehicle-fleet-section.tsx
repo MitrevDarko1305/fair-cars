@@ -38,7 +38,7 @@ const VEHICLES: Vehicle[] = [
     image: "/Hero-Images/land-cruiser.png",
     seats: 5,
     doors: 4,
-    transmission: "Automatik",
+    transmission: "Manuell",
     type: "Limousine",
     price: "ab 28.500 €",
     },
@@ -51,6 +51,26 @@ const VEHICLES: Vehicle[] = [
     transmission: "Automatik",
     type: "Small car",
     price: "ab 41.200 €",
+    },
+
+     {
+    name: "VW ID.4",
+    image: "/Hero-Images/VW-Toureg.png",
+    seats: 4,
+    doors: 3,
+    transmission: "Manuell",
+    type: "SUV",
+    price: "ab 16.700 €",
+    },
+
+    {
+    name: "Porsche-Panorama",
+    image: "/Hero-Images/Porsche-Panorama.png",
+    seats: 4,
+    doors: 3,
+    transmission: "Manuell",
+    type: "Sports car",
+    price: "ab 82.500 €",
     },
 ]
 
@@ -68,7 +88,7 @@ export default function VehicleFleetSection() {
   }
 
   return (
-    <section className="bg-foreground px-6 py-20 text-center lg:px-10">
+    <section className="bg-foreground sm:px-6 px-2 py-20 text-center lg:px-10">
       <span className="inline-block bg-background px-2 py-1.5  text-xs font-semibold text-foreground">
         Unser Bestand
       </span>
@@ -78,7 +98,7 @@ export default function VehicleFleetSection() {
         Fahrzeuge
       </h2>
  
-      <p className="mx-auto mt-4 max-w-2xl text-base text-foreground/70">
+      <p className="mx-auto mt-4 max-w-2xl text-base text-background mb-10 mt-6 sm:mt-0 sm:mb-0">
         Sorgfältig geprüft und bereit für Ihre nächste Fahrt — entdecken Sie
         unseren aktuellen Fahrzeugbestand.
       </p>
@@ -110,7 +130,7 @@ export default function VehicleFleetSection() {
           {VEHICLES.map((vehicle) => (
             <div
               key={vehicle.name}
-              className="w-[85%] shrink-0 snap-start bg-surface text-left text-background shadow-md sm:w-[45%] lg:w-[calc(33.333%-16px)]"
+              className="w-full md:w-[85%] shrink-0 snap-start bg-surface text-left text-background shadow-md sm:w-[45%] lg:w-[calc(33.333%-16px)]"
             >
               <img
                 src={vehicle.image}

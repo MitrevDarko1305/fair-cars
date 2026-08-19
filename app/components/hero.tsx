@@ -92,7 +92,7 @@ const heroEndRef = useRef<HTMLDivElement>(null);
 
      <div ref={heroEndRef} />
       {/* HERO — background image scoped to just nav + headline */}
-      <div className="relative min-h-[30vh]">
+      <div className="relative lg:min-h-[25vh] sm:min-h-[15vh] min-h-[10vh]">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -110,7 +110,7 @@ const heroEndRef = useRef<HTMLDivElement>(null);
           </div>
 
           {/* Headline */}
-          <div className="mx-auto max-w-7xl px-6 pb-10 pt-8 lg:px-10 lg:pb-6 lg:pt-2">
+          <div className="mx-auto max-w-7xl px-6 pb-10 pt-12 sm:pt-28 pt-24 lg:px-10 lg:pb-6 lg:pt-24">
             <h1 className="max-w-4xl text-4xl font-bold font-heading leading-[1.1] tracking-wide sm:text-5xl lg:text-5xl">
               Auf der Suche nach einem <span className="text-primary">Fahrzeug</span>? Sie sind
               hier genau richtig.
@@ -122,15 +122,15 @@ const heroEndRef = useRef<HTMLDivElement>(null);
 
 
       {/* Request card — outside the hero, normal flow */}
-      <div className="relative z-40 mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="relative z-40 mx-auto max-w-7xl sm:px-6 px-2 lg:px-10">
         <form
           onSubmit={handleSendRequest}
-          className="bg-foreground p-6 text-slate-900 shadow-2xl sm:p-8 lg:p-10"
+          className="bg-foreground sm:p-6 p-4 text-slate-900 shadow-2xl sm:p-8 lg:p-10"
         >
           <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:gap-10">
             {/* Vehicle type */}
             <div>
-              <p className="mb-4 text-sm font-bold text-slate-900">
+              <p className="mb-4 mt-4 sm:mt-0 text-sm font-bold text-slate-900">
                   Welchen Fahrzeugtyp suchen Sie?
               </p>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2 lg:gap-3">
@@ -141,14 +141,14 @@ const heroEndRef = useRef<HTMLDivElement>(null);
                       type="button"
                       key={id}
                       onClick={() => setVehicleType(id)}
-                      className={`flex w-28 flex-col items-center justify-center gap-3 cursor-pointer px-4 py-6 transition sm:w-32 ${
+                      className={`flex flex-col items-center justify-center gap-3 cursor-pointer px-4 py-6 transition sm:w-32 ${
                         active
                           ? "bg-primary text-foreground"
                           : "bg-primary text-white hover:bg-primary-hover"
                       }`}
                     >
                       <Icon className="h-9 w-9" />
-                      <span className="text-sm font-semibold">{label}</span>
+                      <span className="text-sm font-black">{label}</span>
                     </button>
                   );
                 })}
@@ -218,7 +218,7 @@ const heroEndRef = useRef<HTMLDivElement>(null);
             </div>
           </div>
 
-          <div className="mt-8 flex items-center justify-end gap-4">
+          <div className="sm:mt-8 mt-6 flex items-center lg:justify-end justiy-start gap-4">
             {status === "sent" && (
               <span className="text-sm font-medium text-emerald-600">
                 Opening your email app…
@@ -226,7 +226,7 @@ const heroEndRef = useRef<HTMLDivElement>(null);
             )}
             <button
               type="submit"
-              className="bg-primary tracking-wide cursor-pointer px-8 py-3.5 text-sm font-black text-white shadow-sm font-heading transition hover:bg-primary-hover"
+              className="bg-primary tracking-wide cursor-pointer px-8 py-3.5 text-sm font-black text-foreground shadow-sm font-heading transition hover:bg-primary-hover"
             >
               Anfrage senden
             </button>
@@ -235,7 +235,7 @@ const heroEndRef = useRef<HTMLDivElement>(null);
       </div>
 
       {/* 4-step process */}
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+      <div className="mx-auto max-w-7xl px-6 pt-20 pb-16 lg:px-10">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((step, i) => (
             <div key={step.number} className="relative">

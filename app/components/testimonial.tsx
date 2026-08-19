@@ -65,7 +65,7 @@ export default function TestimonialsSections() {
   }
 
   return (
-    <section className="bg-background px-6 pt-20 pb-0 lg:px-10">
+    <section className="bg-background px-6 sm:pt-20 pt-16 pb-0 lg:px-10">
       <div className="mx-auto max-w-6xl text-center">
         <span className="inline-block bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
           Kundenstimmen
@@ -102,7 +102,7 @@ export default function TestimonialsSections() {
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="relative flex h-[750px] w-[85%] shrink-0 snap-start flex-col rounded-xl overflow-hidden sm:w-[45%] lg:w-[calc(33.333%-16px)]"
+              className="relative flex h-[750px] w-full sm:w-[90%] shrink-0 snap-start flex-col lg:rounded-xl overflow-hidden sm:w-[45%] lg:w-[calc(33.333%-16px)]"
             >
               {/* Background photo */}
               <img
@@ -122,7 +122,7 @@ export default function TestimonialsSections() {
                   <p className="mt-3 text-sm leading-relaxed text-white/80">
                     {t.quote}
                   </p>
-                  <div className="mt-5 flex items-center gap-2 justify-center text-sm font-black font-heading text-foreground">
+                  <div className="mt-5 flex items-center gap-2 justify-center text-sm flex-col md:flex-row font-black font-heading text-foreground">
                     <p className="mt-0 text-sm leading-relaxed text-foreground/60">
                     {t.proffesion}
                     </p>

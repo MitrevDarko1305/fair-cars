@@ -12,14 +12,14 @@ const STATS: Stat[] = [
 
 export default function FounderSection() {
     return (
-        <section className="bg-foreground relative px-6 py-20 lg:px-10">
-            <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <section className="bg-foreground relative px-6 pt-12 pb-20 lg:px-10">
+            <div className="mx-auto grid max-w-6xl items-center sm:gap-12 gap-6 lg:grid-cols-2 lg:gap-20">
 
                  {/* Photo */}
                <div className="relative">
                {/* TODO: replace with a real photo of the founder */}
                 <img
-                 src="/Hero-Images/Founder.jpg"
+                 src="/Hero-Images/founder.jpg"
                  alt="Gründer von Fair Cars Stuttgart"
                  className="h-[480px] w-full object-[center_20%]"
                 />
